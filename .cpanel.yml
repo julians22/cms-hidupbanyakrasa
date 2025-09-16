@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/hidupban/laravel_data_directory/cms-hidupbanyakrasa
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/vendor
+    - composer install --working-dir=$DEPLOYPATH --no-dev
+    - /bin/rm -rf $DEPLOYPATH/.git
+    - /bin/rm -rf $DEPLOYPATH/.cpanel.yml
+    - /bin/rm -rf $DEPLOYPATH/.gitignore
