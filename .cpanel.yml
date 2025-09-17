@@ -4,7 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/hidupban/laravel_data_directory/cms-hidupbanyakrasa
     - /bin/cp -R * $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/vendor
-    - /opt/cpanel/ea-php82/root/usr/bin/php /bin/composer install --working-dir=$DEPLOYPATH --no-dev
+    - /opt/cpanel/ea-php82/root/usr/bin/php ~/bin/composer install --no-dev
     - /bin/rm -rf $DEPLOYPATH/.git
     - /bin/rm -rf $DEPLOYPATH/.cpanel.yml
     - /bin/rm -rf $DEPLOYPATH/.gitignore
