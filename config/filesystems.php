@@ -35,6 +35,12 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'local_download' => [
+            'driver' => 'local',
+            'root' => storage_path('app/downloads'),
+            'visibility' => 'public',
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

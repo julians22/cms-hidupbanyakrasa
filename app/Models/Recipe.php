@@ -17,4 +17,13 @@ class Recipe extends Model
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
+
+    public function scopeIsActive($query){
+        return $query->where('status', 1);
+    }
+
+    public function scopeForCategory($query, $category)
+    {
+        return $query->where('category', $category);
+    }
 }

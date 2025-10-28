@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Group api v1
+Route::group(['prefix' => 'v1'], function () {
+    // Horoscope detail api
+    Route::group(['prefix' => 'horoscope', 'as' => 'horoscope.'], function () {
+        Route::post('detail', [\App\Http\Controllers\FrontendPageController::class, 'horoscope_api_detail'])->name('api_detail');
+    });
+});
+

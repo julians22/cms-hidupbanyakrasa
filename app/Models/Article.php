@@ -29,4 +29,46 @@ class Article extends Model
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
+
+    public function scopeArticle($query)
+    {
+        return $query->where('category', 'article');
+    }
+
+    public function scopeTvc($query)
+    {
+        return $query->where('category', 'tvc');
+    }
+
+    public function scopeIsActive($query)
+    {
+        return $query->where('publish', 'Yes');
+    }
+
+    public function scopeIsHoroscope($query)
+    {
+        return $query->where('category', 'horoscope');
+    }
+
+    public function scopeIsGaleries($query) {
+        return $query->where('category', 'gallery');
+    }
+
+    public function scopeOfCategory($query)
+    {
+        // Allowed Category: 'article','recepies','competitions','tvc','horoscope','gallery';
+
+        $params = request()->query('category') ?? null;
+
+        if (!empty($params)) {
+
+            if (in_array($params, ['article', 'recepies', 'competitions', 'tvc', 'horoscope', 'gallery'])) {
+                return $query->where('category', $params);
+            } else {
+                return $query;
+            }
+        }
+
+        return $query->where('category', 'article');
+    }
 }
