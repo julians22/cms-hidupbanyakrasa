@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/hidupban/laravel_data_directory/cms-hidupbanyakrasa
+    - export DEPLOYPATH=/home/hidupban/laravel_data_directory/hidupbanyakrasa-core
     - /bin/cp -R * $DEPLOYPATH
     - /bin/rm -rf $DEPLOYPATH/vendor
     - /bin/rm -rf $DEPLOYPATH/.git
