@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-class RecipeImageFixerCommand extends Command
+class CompetitionImageFixerCommand extends Command
 {
     /**
      * The name and signature of the console command.
