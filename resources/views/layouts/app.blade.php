@@ -10,7 +10,7 @@
 	<meta name="robots" content="INDEX,FOLLOW"/>
 	<meta name="google-site-verification" content="on-w9yZSwwIhE_ffwGW08Mx4qXGK0mQzt1tKUkr-SOI" />
 
-	<link rel="shortcut icon" media="all" href="{{ asset('favicon.ico') }}">
+	<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }} ">
     <link rel="stylesheet" href="{{ asset('plugins/slick/slick.css') }}">
@@ -84,10 +84,9 @@
   	</script>
 
   	<!-- Revamp Start new Font -->
-  	<link rel="preconnect" href="https://fonts.googleapis.com">
-  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  	<style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   	<!-- Revamp End -->
 
   	<!-- Google Analytics 4 -->
@@ -348,7 +347,7 @@
 		<div class="container">
 			<div class="row inner-footer">
 				<div class="col-12 copyright">
-					2018 Good Day Copyright. All rightreserved.
+					&copy; {{ date('Y') }} Good Day Copyright. All rightreserved.
 				</div>
 			</div>
 		</div>
