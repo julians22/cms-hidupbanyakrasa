@@ -9,11 +9,9 @@ deployment:
     - /bin/rm -rf $DEPLOYPATH/lang
     - /bin/rm -rf $DEPLOYPATH/bootstrap
     - /bin/cp -R * $DEPLOYPATH
-    - /bin/rm -rf $DEPLOYPATH/vendor
     - /bin/rm -rf $DEPLOYPATH/.git
     - /bin/rm -rf $DEPLOYPATH/.cpanel.yml
     - /bin/rm -rf $DEPLOYPATH/.gitignore
-    - /opt/cpanel/ea-php82/root/usr/bin/php ~/bin/composer install --no-dev
     - /opt/cpanel/ea-php82/root/usr/bin/php artisan cache:clear
     - /opt/cpanel/ea-php82/root/usr/bin/php artisan view:clear
 
